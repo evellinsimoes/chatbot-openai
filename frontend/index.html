@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot OpenAI</title>
     <!-- Importa o arquivo de estilos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="frontend/style.css">
 </head>
 <body>
 
@@ -19,11 +19,11 @@
 
         <!-- Área onde o usuário digita -->
         <div class="input-area">
+            <!-- Permite enviar com Enter -->
             <input 
                 type="text" 
                 id="user-input" 
                 placeholder="Digite sua mensagem..."
-                <!-- Permite enviar com Enter -->
                 onkeypress="if(event.key==='Enter') sendMessage()"
             />
             <button onclick="sendMessage()">Enviar</button>
@@ -31,6 +31,6 @@
     </div>
 
     <!-- Importa o arquivo JavaScript -->
-    <script src="app.js"></script>
+    <script src="frontend/app.js"></script>
 </body>
 </html>

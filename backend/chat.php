@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // Define que a resposta será em JSON
 header('Content-Type: application/json');
 
@@ -31,23 +32,20 @@ $ch = curl_init('https://api.openai.com/v1/chat/completions');
 
 // Configura a requisição
 curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,  // retorna a resposta em vez de imprimir
-    CURLOPT_POST => true,             // envia como POST
-    CURLOPT_POSTFIELDS => json_encode($payload), // converte para JSON
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => json_encode($payload),
     CURLOPT_HTTPHEADER => [
         'Content-Type: application/json',
-        'Authorization: Bearer ' . $apiKey, // autenticação com sua chave
+        'Authorization: Bearer ' . $apiKey,
     ],
+    CURLOPT_SSL_VERIFYPEER => false, // ← adiciona essa linha
 ]);
 
 // Executa a requisição e fecha a conexão
 $response = curl_exec($ch);
-curl_close($ch);
 
-// Converte a resposta da OpenAI de JSON para array PHP
 $data = json_decode($response, true);
-
-// Retorna só o texto da resposta para o frontend
 echo json_encode([
     'reply' => $data['choices'][0]['message']['content'] ?? 'Erro na resposta.'
 ]);
