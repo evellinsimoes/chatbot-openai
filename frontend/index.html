@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Define o idioma e codificação da página -->
     <meta charset="UTF-8">
-    <!-- Faz a página se adaptar a qualquer tamanho de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot OpenAI</title>
-    <!-- Importa o arquivo de estilos -->
     <link rel="stylesheet" href="frontend/style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>💬 Chatbot</h1>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <img src="frontend/logo.svg" alt="Logo" width="36" height="36"/>
+        <span class="sidebar-title">Chatbot</span>
+    </div>
 
-        <!-- Área onde as mensagens aparecem -->
-        <div id="chat"></div>
+    <div class="sidebar-menu">
+    <div class="menu-item" onclick="newChat()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+        </svg>
+        <span>Novo chat</span>
+    </div>
+    <div class="menu-item" onclick="toggleSearch()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <span>Buscar em chats</span>
+    </div>
+    </div>
 
-        <!-- Área onde o usuário digita -->
-        <div class="input-area">
-            <!-- Permite enviar com Enter -->
-            <input 
-                type="text" 
-                id="user-input" 
-                placeholder="Digite sua mensagem..."
-                onkeypress="if(event.key==='Enter') sendMessage()"
-            />
-            <button onclick="sendMessage()">Enviar</button>
+    <div class="history-label">Recentes</div>
+    <div id="history-list"></div>
+    </div>
+
+    <div class="main">
+        <div id="chat">
+            <!-- Tela inicial -->
+            <div class="welcome" id="welcome">
+                <h1>Como posso ajudar?</h1>
+                <div class="suggestions">
+                    <button class="suggestion-btn" onclick="fillInput('O que é uma API REST?')">O que é uma API REST?</button>
+                    <button class="suggestion-btn" onclick="fillInput('Me explica o git commit')">Me explica o git commit</button>
+                    <button class="suggestion-btn" onclick="fillInput('O que é PHP?')">O que é PHP?</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Pergunte alguma coisa..."
+                    onkeypress="if(event.key==='Enter') sendMessage()"
+                />
+                <button onclick="sendMessage()">↑</button>
+            </div>
         </div>
     </div>
 
-    <!-- Importa o arquivo JavaScript -->
+    <!-- Modal de busca -->
+<div class="modal-overlay" id="modal-overlay" onclick="toggleSearch()">
+    <div class="modal" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Buscar em chats..." oninput="searchChats()" autofocus/>
+            <span class="modal-close" onclick="toggleSearch()">✕</span>
+        </div>
+        <div id="search-results"></div>
+    </div>
+</div>
+    
     <script src="frontend/app.js"></script>
 </body>
 </html>

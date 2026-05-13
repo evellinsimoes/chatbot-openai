@@ -1,0 +1,28 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="76" height="76" rx="38" fill="url(#bg3)" stroke="#1e3a6a" stroke-width="1"/>
+  <path d="M18 26 Q18 18 26 18 L54 18 Q62 18 62 26 L62 44 Q62 52 54 52 L44 52 L40 60 L36 52 L26 52 Q18 52 18 44 Z" fill="none" stroke="#00d4ff" stroke-width="1.2" opacity="0.7"/>
+  <line x1="30" y1="28" x2="40" y2="24" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="40" y1="24" x2="50" y2="28" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="50" y1="28" x2="52" y2="38" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="52" y1="38" x2="44" y2="44" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="44" y1="44" x2="36" y2="44" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="36" y1="44" x2="28" y2="38" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="28" y1="38" x2="30" y2="28" stroke="#00d4ff" stroke-width="0.8" opacity="0.5"/>
+  <line x1="30" y1="28" x2="52" y2="38" stroke="#7c3aed" stroke-width="0.6" opacity="0.3"/>
+  <line x1="50" y1="28" x2="28" y2="38" stroke="#7c3aed" stroke-width="0.6" opacity="0.3"/>
+  <line x1="40" y1="24" x2="40" y2="44" stroke="#00d4ff" stroke-width="0.6" opacity="0.3" stroke-dasharray="2,2"/>
+  <circle cx="40" cy="24" r="2.5" fill="#00d4ff" opacity="0.95"/>
+  <circle cx="30" cy="28" r="2" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="50" cy="28" r="2" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="52" cy="38" r="2" fill="#7c3aed" opacity="0.8"/>
+  <circle cx="28" cy="38" r="2" fill="#7c3aed" opacity="0.8"/>
+  <circle cx="44" cy="44" r="2" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="36" cy="44" r="2" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="40" cy="35" r="3" fill="#ffffff" opacity="0.95"/>
+</svg>
