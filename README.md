@@ -1,6 +1,7 @@
 # 💬 Chatbot com OpenAI API
 
 Chatbot com histórico de conversa, integrado à API da OpenAI.
+
 Desenvolvido com PHP no backend e JavaScript puro no frontend.
 
 ## 🚀 Tecnologias utilizadas
@@ -10,7 +11,7 @@ Desenvolvido com PHP no backend e JavaScript puro no frontend.
 - HTML5 + CSS3
 - OpenAI API (gpt-4o-mini)
 
-## ✨ Funcionalidades
+## 💡 Funcionalidades
 
 - Envio de mensagens em tempo real
 - Histórico de conversa mantido durante a sessão
@@ -43,5 +44,7 @@ O arquivo .env com a chave da API está no .gitignore e nunca é enviado para o 
 ## 👩‍💻 Autora
 
 Évellin Simões
+
 LinkedIn: linkedin.com/in/evellin-simoes
+
 GitHub: github.com/evellinsimoes
