@@ -20,22 +20,32 @@ Desenvolvido com PHP no backend e JavaScript puro no frontend.
 
 ## ⚙️ Como rodar localmente
 
-1. Clone o repositório
+1. Clone o repositório:
+```bash
 git clone https://github.com/evellinsimoes/chatbot-openai.git
+```
 
-2. Entre na pasta do projeto
+2. Entre na pasta do projeto:
+```bash
 cd chatbot-openai
+```
 
-3. Configure sua chave da OpenAI — copie o arquivo de exemplo:
+3. Crie o arquivo de configuração:
+```bash
 cp backend/.env.example backend/.env
+```
 
-4. Abra o arquivo backend/.env e adicione sua chave:
+4. Abra o arquivo `backend/.env` e adicione sua chave:
+```
 OPENAI_API_KEY=sua-chave-aqui
+```
 
 5. Suba o servidor PHP:
+```bash
 php -S localhost:8000
+```
 
-6. Acesse no navegador: http://localhost:8000/frontend
+6. Acesse no navegador: `http://localhost:8000/frontend`
 
 ## 🔒 Segurança
 
