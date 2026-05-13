@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define o idioma e codificação da página -->
+    <meta charset="UTF-8">
+    <!-- Faz a página se adaptar a qualquer tamanho de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot OpenAI</title>
+    <!-- Importa o arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>💬 Chatbot</h1>
+
+        <!-- Área onde as mensagens aparecem -->
+        <div id="chat"></div>
+
+        <!-- Área onde o usuário digita -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Digite sua mensagem..."
+                <!-- Permite enviar com Enter -->
+                onkeypress="if(event.key==='Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

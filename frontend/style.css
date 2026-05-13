@@ -1,0 +1,105 @@
+/* Reset básico — remove margens e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    height: 100vh;           /* ocupa a altura toda da tela */
+}
+
+/* Caixa principal do chat */
+.container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* Área de mensagens — rolagem quando ficar cheio */
+#chat {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Estilo base de cada bolha de mensagem */
+.bubble {
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Mensagem do usuário — aparece à direita */
+.bubble.user {
+    background-color: #7c3aed;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* Mensagem do chatbot — aparece à esquerda */
+.bubble.assistant {
+    background-color: #f0f0f0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* Área do input e botão */
+.input-area {
+    display: flex;
+    gap: 8px;
+}
+
+/* Campo de texto */
+input {
+    flex: 1; /* ocupa todo o espaço disponível */
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7c3aed; /* roxo ao focar */
+}
+
+/* Botão enviar */
+button {
+    padding: 10px 20px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #6d28d9; /* escurece ao passar o mouse */
+}
