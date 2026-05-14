@@ -4,6 +4,10 @@ Chatbot com histórico de conversa, integrado à API da OpenAI.
 
 Desenvolvido com PHP no backend e JavaScript puro no frontend.
 
+## 📸 Screenshot
+
+![Chatbot Interface](frontend/imagemtela.png)
+
 ## 🚀 Tecnologias utilizadas
 
 - PHP 8 + cURL
