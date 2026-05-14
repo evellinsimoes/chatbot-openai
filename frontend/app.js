@@ -104,6 +104,19 @@ if (titleEl) titleEl.textContent = newConv.title;
     input.value = '';
     renderHistory();
 
+    // Mostra o indicador de digitando
+const typing = document.createElement('div');
+typing.className = 'bubble-row assistant';
+typing.id = 'typing-indicator';
+typing.innerHTML = `
+    <div class="avatar">AI</div>
+    <div class="bubble assistant typing">
+        <span></span><span></span><span></span>
+    </div>
+`;
+document.getElementById('chat').appendChild(typing);
+document.getElementById('chat').scrollTop = document.getElementById('chat').scrollHeight;
+
     // Envia para o backend
     const res = await fetch('../backend/chat.php', {
         method: 'POST',
@@ -132,6 +145,9 @@ function addBubble(role, text) {
         avatar.textContent = 'AI';
         row.appendChild(avatar);
     }
+
+    // Remove o indicador de digitando
+document.getElementById('typing-indicator')?.remove();
 
     const div = document.createElement('div');
     div.className = 'bubble ' + role;
