@@ -1,8 +1,13 @@
 # 💬 Chatbot com OpenAI API
 
-Chatbot com histórico de conversa, integrado à API da OpenAI.
+Chatbot conversacional com histórico de sessão, capaz de responder perguntas sobre qualquer assunto.  
+Desenvolvido com PHP no backend e JavaScript puro no frontend, integrado à API da OpenAI.
 
-Desenvolvido com PHP no backend e JavaScript puro no frontend.
+![PHP](https://img.shields.io/badge/PHP-8.0-777BB4?logo=php&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?logo=openai&logoColor=white)
 
 ## 📸 Screenshot
 
@@ -53,12 +58,15 @@ php -S localhost:8000
 
 ## 🔒 Segurança
 
-O arquivo .env com a chave da API está no .gitignore e nunca é enviado para o repositório.
+O arquivo `.env` com a chave da API está no `.gitignore` e nunca é enviado para o repositório.
+
+## 🤖 Ferramentas de IA utilizadas
+
+Este projeto foi desenvolvido com auxílio do [Claude](https://claude.ai) (Anthropic)
+para suporte no desenvolvimento, estruturação do código e boas práticas.
 
 ## 👩‍💻 Autora
 
-Évellin Simões
-
-LinkedIn: linkedin.com/in/evellin-simoes
-
-GitHub: github.com/evellinsimoes
+Évellin Simões  
+LinkedIn: [linkedin.com/in/evellin-simoes](https://linkedin.com/in/evellin-simoes)  
+GitHub: [github.com/evellinsimoes](https://github.com/evellinsimoes)m/evellinsimoes
