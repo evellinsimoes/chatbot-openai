@@ -69,4 +69,4 @@ para suporte no desenvolvimento, estruturação do código e boas práticas.
 
 Évellin Simões  
 LinkedIn: [linkedin.com/in/evellin-simoes](https://linkedin.com/in/evellin-simoes)  
-GitHub: [github.com/evellinsimoes](https://github.com/evellinsimoes)m/evellinsimoes
+GitHub: [github.com/evellinsimoes](https://github.com/evellinsimoes)
